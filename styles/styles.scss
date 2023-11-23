@@ -1,0 +1,12 @@
+@use "reset";
+@use "login";
+@use "create-user";
+@use "../components/Header/header";
+@use "../components/SideNav/side-nav";
+@use "../components/Featured/featured-media";
+@use "../components/ForYouList/for-you-list";
+@use "../components/JustAdded/just-added";
+@use "../components/PosterView/poster-view";
+@use "../components/CastInfo/cast-info";
+@use "../components/Account/account";
+@use "../components/SearchModal/search-modal";
