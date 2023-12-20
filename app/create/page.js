@@ -1,10 +1,16 @@
+'use client'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faMagnifyingGlass,
     faCircleStop
 } from "@fortawesome/free-solid-svg-icons";
+import { useStateContext } from "../../components/HBOProvider.js";
 
 export default function CreateUser() {
+    const globalState = useStateContext();
+    console.log(globalState);
+
     return (
         <div>
             <div className="create-user">
@@ -15,10 +21,10 @@ export default function CreateUser() {
                     </span>
                 </div>
                 <div className="create-user__form">
-                    <img className="create-user__user-img" alt="Jon Snow From Game of Thrones" src="https://images.cdn.prd.api.discomax.com/2023%2F3%2F31%2Fd401a2a0-d0ac-4a80-ac13-d9d34ec41c8d.png" />
+                    <img className="create-user__user-img" alt="Jon Snow From Game of Thrones" src={globalState.defaultUserImg} />
                     <div className="create-user__input-group">
                         <label>Name</label>
-                        <input type="text" className="create-user__input-text" />
+                        <input onChange={globalState.createUserAction} value={globalState.user} type="text" className="create-user__input-text" />
                         <div className="create-user__colors">
                             <div className="create-user__color create-user__color--active" style={{ background: 'rgb(2, 27, 64)', background: 'linear-gradient(135deg, rgba(2, 27, 64, 1) 11%, rgba(119, 30, 135, 1) 100%)' }}></div>
                             <div className="create-user__color" style={{ background: 'rgb(2,0,36)', background: 'linear-gradient(165deg, rgba(2,0,36,1) 0%, rgba(0,141,170,1) 100%)' }}></div>

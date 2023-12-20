@@ -1,5 +1,4 @@
 @use "reset";
-@use "login";
 @use "create-user";
 @use "../components/Header/header";
 @use "../components/SideNav/side-nav";
@@ -10,3 +9,4 @@
 @use "../components/CastInfo/cast-info";
 @use "../components/Account/account";
 @use "../components/SearchModal/search-modal";
+@use "../components/Login/login-component";
